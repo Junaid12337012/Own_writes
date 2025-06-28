@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Dynamic Title, set by seoUtils -->
+  <title>Own_writes - Your Modern Blogging Platform</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A full-featured blogging platform with AI-powered content tools, user management, and a modern UI. Discover, create, and share your stories.">
+  <meta name="keywords" content="blog, blogging, articles, own_writes, ai content, writing platform, content creation, technology, community">
+  <meta name="author" content="Own_writes Team">
+  <meta name="robots" content="index, follow">
+  <meta id="theme-color-meta" name="theme-color" content="#10b981"> <!-- Default light theme color, will be updated by ThemeContext -->
+  <link id="canonical-link" rel="canonical" href="https://own-writes-app.com/"> <!-- Placeholder, will be updated by seoUtils -->
+
+  <!-- Favicon Placeholders - Replace with your actual favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- End Favicon Placeholders -->
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta id="og-url" property="og:url" content="https://own-writes-app.com/">
+  <meta id="og-title" property="og:title" content="Own_writes - Your Modern Blogging Platform">
+  <meta id="og-description" property="og:description" content="A full-featured blogging platform with AI-powered content tools. Discover, create, and share your stories.">
+  <meta id="og-image" property="og:image" content="https://picsum.photos/seed/default-og/1200/630"> <!-- Default OG image -->
+  <meta property="og:site_name" content="Own_writes">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twitter-url" property="twitter:url" content="https://own-writes-app.com/"> <!-- Not a standard tag, but good for consistency -->
+  <meta id="twitter-title" name="twitter:title" content="Own_writes - Your Modern Blogging Platform">
+  <meta id="twitter-description" name="twitter:description" content="A full-featured blogging platform with AI-powered content tools. Discover, create, and share your stories.">
+  <meta id="twitter-image" name="twitter:image" content="https://picsum.photos/seed/default-og/1200/600"> <!-- Default Twitter image -->
+  <!-- <meta name="twitter:site" content="@yourtwitterhandle"> -->
+  <!-- <meta name="twitter:creator" content="@yourtwitterhandle"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.1.3/24/outline/heroicons.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // Enable class-based dark mode
+      theme: {
+        extend: {
+          colors: {
+            primary: { // Softer Grays for Text
+              "50": "#f8fafc",     // Dark: #030712
+              "100": "#f1f5f9",   // Dark: #111827
+              "200": "#e2e8f0",   // Dark: #1f2937
+              "300": "#cbd5e1",   // Dark: #374151 (Dark mode body text)
+              "400": "#94a3b8",   // Dark: #4b5563 (Dark mode secondary text)
+              "500": "#64748b",   // Dark: #6b7280
+              "600": "#4b5563",   // Light mode body text. Dark: #9ca3af (Dark mode stronger text)
+              "700": "#374151",   // Light mode stronger text. Dark: #d1d5db (Dark mode headings)
+              "800": "#1f2937",   // Light mode headings. Dark: #e5e7eb
+              "900": "#111827",   // Deepest. Dark: #f3f4f6
+              "950": "#030712"    // Dark: #f9fafb
+            },
+            secondary: { // Cleaner Light Grays for Backgrounds & Borders
+              "50": "#f9fafb",     // Dark: #111827 (Dark mode card/subtle bg)
+              "100": "#f3f4f6",   // Dark: #1f2937 (Dark mode slightly lighter card/bg)
+              "200": "#e5e7eb",   // Main border color. Dark: #374151 (Dark mode border)
+              "300": "#d1d5db",   // Dark: #4b5563
+              "400": "#9ca3af",   // Dark: #6b7280
+              "500": "#6b7280",   // Dark: #9ca3af
+              "600": "#4b5563",   // Dark: #cbd5e1
+              "700": "#374151",   // Dark: #e2e8f0
+              "800": "#1f2937",   // Dark: #f1f5f9
+              "900": "#111827",   // Dark: #f8fafc
+              "950": "#030712"    // Dark: #f9fafb
+            },
+            accent: { // Softer Emerald Green
+              "50": "#ecfdf5",   // Dark: #064e3b
+              "100": "#d1fae5",  // Dark: #059669
+              "200": "#a7f3d0",  // Dark: #10b981
+              "300": "#6ee7b7",  // Dark: #34d399 (Accent for dark text on light accent bg)
+              "400": "#34d399",  // Main Accent. Dark: #6ee7b7 (Brighter for dark mode)
+              "500": "#10b981",  // Darker for Hover/Active. Dark: #34d399
+              "600": "#059669",  // Dark: #10b981
+              "700": "#047857",  // Dark: #059669
+              "800": "#065f46",  // Dark: #064e3b
+              "900": "#064e3b",  // Dark: #ecfdf5 (Text on dark accent bg)
+              "950": "#022c22"   // Dark: #d1fae5
+            }
+          },
+          fontFamily: {
+            heading: ['Lora', 'Georgia', 'serif'],
+            body: [
+              "Inter", "ui-sans-serif", "system-ui", "-apple-system", "system-ui",
+              "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif",
+              "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+            ],
+            sans: [
+              "Inter", "ui-sans-serif", "system-ui", "-apple-system", "system-ui",
+              "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif",
+              "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+            ]
+          }
+        },
+      }
+    }
+  </script>
+<style>
+  :root {
+    --chart-text-color: theme('colors.primary.700');
+    --chart-grid-color: theme('colors.secondary.200');
+    --chart-bar-color: theme('colors.accent.400');
+    --chart-tooltip-bg: #ffffff;
+    --chart-tooltip-text: theme('colors.primary.700');
+    --chart-legend-text: theme('colors.primary.600');
+  }
+  html.dark {
+    --chart-text-color: theme('colors.primary.300');
+    --chart-grid-color: theme('colors.primary.700');
+    --chart-bar-color: theme('colors.accent.400');
+    --chart-tooltip-bg: theme('colors.primary.800');
+    --chart-tooltip-text: theme('colors.primary.200');
+    --chart-legend-text: theme('colors.primary.400');
+  }
+  body {
+    background-color: #ffffff; /* Light mode default */
+    color: theme('colors.primary.700'); /* Light mode default text */
+  }
+  html.dark body {
+    background-color: theme('colors.primary.900'); /* Dark mode background */
+    color: theme('colors.primary.300'); /* Dark mode default text */
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    color: theme('colors.primary.800');
+    font-family: theme('fontFamily.heading');
+    /* margin-bottom: theme('spacing.4'); Ensure sufficient spacing */
+  }
+  html.dark .prose h1, html.dark .prose h2, html.dark .prose h3, html.dark .prose h4 {
+    color: theme('colors.primary.100');
+  }
+  .prose p, .prose li {
+    color: theme('colors.primary.600');
+    line-height: 1.7;
+    /* margin-bottom: theme('spacing.4'); */
+  }
+  html.dark .prose p, html.dark .prose li {
+    color: theme('colors.primary.300');
+  }
+  .prose blockquote {
+     color: theme('colors.primary.600');
+     border-left-color: theme('colors.accent.400');
+  }
+  html.dark .prose blockquote {
+     color: theme('colors.primary.400');
+     border-left-color: theme('colors.accent.500');
+  }
+  .prose a {
+    color: theme('colors.accent.500');
+    text-decoration: none;
+  }
+  html.dark .prose a {
+    color: theme('colors.accent.400');
+  }
+  .prose a:hover {
+    color: theme('colors.accent.600');
+    text-decoration: underline;
+  }
+  html.dark .prose a:hover {
+    color: theme('colors.accent.300');
+  }
+  .prose strong {
+    color: theme('colors.primary.800');
+  }
+  html.dark .prose strong {
+    color: theme('colors.primary.100');
+  }
+  .prose code {
+    color: theme('colors.accent.600');
+    background-color: theme('colors.secondary.100');
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 6px;
+  }
+  html.dark .prose code {
+    color: theme('colors.accent.300');
+    background-color: theme('colors.primary.800');
+  }
+  .prose pre {
+    background-color: theme('colors.primary.800');
+    color: theme('colors.secondary.100');
+    border-radius: 0.5rem;
+    padding: 1em; /* Added padding for pre blocks */
+    overflow-x: auto; /* Added for horizontal scroll if content overflows */
+  }
+  html.dark .prose pre {
+    background-color: theme('colors.primary.800'); /* Changed from primary.900 */
+    color: theme('colors.secondary.200');
+  }
+
+  .fancy-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; /* Added for horizontal scrollbars */
+  }
+  .fancy-scrollbar::-webkit-scrollbar-track {
+    background: theme('colors.secondary.100');
+  }
+  html.dark .fancy-scrollbar::-webkit-scrollbar-track {
+    background: theme('colors.primary.800');
+  }
+  .fancy-scrollbar::-webkit-scrollbar-thumb {
+    background: theme('colors.secondary.300');
+    border-radius: 4px; /* Rounded thumbs */
+  }
+  html.dark .fancy-scrollbar::-webkit-scrollbar-thumb {
+    background: theme('colors.primary.600');
+  }
+  .fancy-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.secondary.400');
+  }
+  html.dark .fancy-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.primary.500');
+  }
+  
+  /* Global Animations & Effects */
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slideInUp { from { transform: translateY(15px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  .page-content-enter {
+    animation: slideInUp 0.4s ease-out forwards;
+  }
+
+  .card-lift-hover {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  .card-lift-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  html.dark .card-lift-hover:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  }
+
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "@/": "./",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.23.1?deps=react@18.2.0",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.0",
+    "@heroicons/react/24/outline": "https://esm.sh/@heroicons/react@2.2.0/24/outline?deps=react@18.2.0",
+    "@heroicons/react/24/solid": "https://esm.sh/@heroicons/react@2.2.0/24/solid?deps=react@18.2.0",
+    "recharts": "https://esm.sh/recharts@2.12.7?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@2.2.0/?deps=react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/"
+  }
+}
+</script>
+<!-- Babel Standalone for in-browser transpilation -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white text-primary-700 font-body antialiased dark:bg-primary-900 dark:text-primary-300">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="env,react,typescript" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
